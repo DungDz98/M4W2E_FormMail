@@ -1,0 +1,10 @@
+controller/MailController.java
+ controller.MailController
+configuration/AppConfiguration.java
+ configuration.AppConfiguration
+configuration/AppInitializer.java
+ configuration.AppInitializer
+service/MailService.java
+ service.MailService
+model/Mail.java
+ model.Mail

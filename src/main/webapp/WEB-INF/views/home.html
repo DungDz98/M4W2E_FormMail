@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<h3>Mail Manager</h3>
+<table border="1">
+    <tr>
+        <th>Languages</th>
+        <th>Page Size</th>
+        <th>Spams Filter</th>
+        <th>Signature</th>
+    </tr>
+    <tr th:each="mail ,loop: ${listMail}">
+        <td th:text="${mail.languages}"></td>
+        <td th:text="${mail.pageSize}"></td>
+        <td th:text="${mail.spamsFilter}"></td>
+        <td th:text="${mail.signature}"></td>
+        <td><a th:href="@{delete(index=${loop.index})}">Delete</a></td>
+        <td><a th:href="@{edit(index=${loop.index})}">Edit</a></td>
+    </tr>
+    <tr>
+        <td><a href="/create">Create</a></td>
+    </tr>
+</table>
+</body>
+</html>
